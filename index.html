@@ -1,91 +1,706 @@
+
 <!DOCTYPE html>
-<html>
+<html lang="ar" dir="rtl">
 <head>
 <meta charset="UTF-8">
-<title>PPRO installer slideshow</title>
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="css/styles.css">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>بوتيك إيبك | İpek Butik</title>
+
+<meta name="description" content="بوتيك إيبك - İpek Butik - معلومات النشاط التجاري وطرق التواصل">
+
 <style>
+:root {
+  --main: #986d85;
+  --dark: #342c33;
+  --gray: #817780;
+  --bg: #faf8fa;
+  --soft: #f7edf3;
+  --line: #ece5ea;
+}
+
+* {
+  box-sizing: border-box;
+}
+
 html {
-		background-color: #fff;
+  scroll-behavior: smooth;
 }
-* {box-sizing: border-box;}
+
 body {
-	margin:0px;}
-.mySlides {opacity: 0; position: absolute; transition: all 1s;}
-img {vertical-align: middle;}
-
-/* Slideshow container */
-.slideshow-container {
-  max-width: 445px;
-  position: relative;
-  margin: auto;
-  cursor: pointer;
+  margin: 0;
+  background: var(--bg);
+  color: var(--dark);
+  font-family: Tahoma, Arial, sans-serif;
+  line-height: 1.8;
 }
 
-/* Caption text */
-.text {
-  font-family: 'AdobeClean', Helvetica, Arial, sans-serif;
-  color: #fff;
-  font-weight: 450;
+.container {
+  width: 92%;
+  max-width: 850px;
+  margin: auto;
+}
+
+a {
+  color: var(--main);
+  text-decoration: none;
+}
+
+header {
+  background: white;
+  border-bottom: 1px solid var(--line);
+  padding: 17px 0;
+}
+
+.header-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 15px;
+}
+
+.logo {
+  color: var(--main);
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.logo small {
+  display: block;
+  font-size: 12px;
+  font-weight: normal;
+  color: var(--gray);
+  direction: ltr;
+  text-align: right;
+}
+
+.hero {
+  background: white;
+  padding: 55px 20px;
+  text-align: center;
+  border-bottom: 1px solid var(--line);
+}
+
+.symbol {
+  width: 70px;
+  height: 70px;
+  background: var(--soft);
+  color: var(--main);
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  font-size: 36px;
+  font-weight: bold;
+  margin: 0 auto 20px;
+}
+
+.hero h1 {
+  margin: 0;
+  font-size: clamp(30px, 6vw, 45px);
+}
+
+.turkish {
+  color: var(--main);
+  font-weight: bold;
+  direction: ltr;
+}
+
+.hero .turkish {
+  font-size: clamp(22px, 4vw, 29px);
+  margin-top: 5px;
+}
+
+.subtitle {
+  color: var(--gray);
+  font-size: 18px;
+  margin-top: 10px;
+}
+
+.hero p {
+  color: var(--gray);
   font-size: 15px;
-  letter-spacing: .3;
-  padding-left: 20px;
-  position: absolute;
-  bottom: 95px;
-  width: 30%;
+  max-width: 540px;
+  margin: 22px auto;
+}
+
+.tags {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 9px;
+  margin-top: 24px;
+}
+
+.tags span {
+  background: var(--soft);
+  color: var(--main);
+  border-radius: 25px;
+  padding: 7px 16px;
+  font-size: 13px;
+}
+
+main {
+  padding: 30px 0;
+}
+
+.card {
+  background: white;
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  margin-bottom: 20px;
+  overflow: hidden;
+}
+
+.card h2 {
+  margin: 0;
+  padding: 14px 20px;
+  background: var(--soft);
+  border-right: 4px solid var(--main);
+  font-size: 19px;
+}
+
+.content {
+  padding: 10px 20px;
+}
+
+.names {
+  padding: 30px 15px;
   text-align: center;
 }
 
-/* Number text (1/3 etc) */
-.numbertext {
-	font-family: 'AdobeClean', Helvetica, Arial, sans-serif;
-  color: #f2f2f2;
+.name1 {
+  font-size: 35px;
+  font-weight: bold;
+}
+
+.name2 {
+  color: var(--main);
+  font-size: 29px;
+  font-weight: bold;
+  direction: ltr;
+}
+
+.name3 {
+  font-size: 22px;
+  margin-top: 15px;
+}
+
+.name4 {
+  font-size: 18px;
+  color: var(--gray);
+  margin-top: 10px;
+}
+
+.name5 {
+  font-size: 17px;
+  color: var(--main);
+  font-weight: bold;
+  letter-spacing: 2px;
+  direction: ltr;
+  margin-top: 12px;
+}
+
+.divider {
+  width: 60px;
+  height: 2px;
+  background: var(--main);
+  margin: 22px auto;
+}
+
+.name-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+  margin-top: 27px;
+}
+
+.name-grid div {
+  background: var(--soft);
+  color: var(--main);
+  padding: 15px;
+  border-radius: 9px;
+  font-weight: bold;
+  font-size: 15px;
+}
+
+.row {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 20px;
+  padding: 12px 0;
+  border-bottom: 1px solid var(--line);
+}
+
+.row:last-child {
+  border-bottom: none;
+}
+
+.label {
+  color: var(--gray);
+  font-size: 14px;
+}
+
+.value {
+  font-size: 14px;
+  font-weight: bold;
+  text-align: left;
+  overflow-wrap: anywhere;
+}
+
+.status {
+  color: #248056;
+}
+
+.contact {
+  background: var(--main);
+  border-radius: 12px;
+  padding: 38px 20px;
+  color: white;
+  text-align: center;
+}
+
+.contact h2 {
+  margin: 0;
+  font-size: 24px;
+}
+
+.contact .turkish {
+  color: white;
+  font-size: 19px;
+}
+
+.contact p {
+  font-size: 14px;
+  margin: 20px 0;
+}
+
+.buttons {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+}
+
+.buttons a {
+  background: white;
+  color: var(--main);
+  padding: 10px 20px;
+  border-radius: 7px;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.note {
+  text-align: center;
   font-size: 12px;
-  padding: 8px 12px;
-  position: absolute;
-  top: 0;
+  color: var(--gray);
+  padding: 20px;
 }
 
-.active {
-  background-color: #717171;
+footer {
+  background: white;
+  border-top: 1px solid var(--line);
+  text-align: center;
+  padding: 30px 15px;
 }
 
-/* Fading animation */
-.fade {
-  -webkit-animation-name: fade;
-  -webkit-animation-duration: 1s;
-  animation-name: fade;
-  animation-duration: 1s;
+footer .arabic {
+  font-size: 25px;
+  font-weight: bold;
 }
 
-@-webkit-keyframes fade {
-  from {opacity: .7}
-  to {opacity: 1}
+footer .turkish {
+  font-size: 21px;
 }
 
-@keyframes fade {
-  from {opacity: .1}
-  to {opacity: 1}
+footer .small {
+  font-size: 12px;
+  color: var(--gray);
+  margin-top: 14px;
 }
 
-/* On smaller screens, decrease text size */
-@media only screen and (max-width: 300px) {
-  .text {font-size: 11px}
+@media(max-width:600px) {
+  .hero {
+    padding: 42px 15px;
+  }
+
+  .row {
+    flex-direction: column;
+    gap: 3px;
+  }
+
+  .value {
+    text-align: right;
+  }
+
+  .name-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .name1 {
+    font-size: 29px;
+  }
+
+  .name2 {
+    font-size: 23px;
+  }
+
+  .buttons {
+    flex-direction: column;
+  }
+
+  .buttons a {
+    display: block;
+  }
 }
 </style>
 </head>
+
 <body>
-<div class="slideshow-container" id="slideContainer" href="#">
 
-<div class="mySlides fade" style="opacity: 1; visibility: visible;">
-    <video class="videos" autoplay loop muted style="width: 445px; height: 239px;"><source src="images/01_creativity_for_all_445x239.mp4" style="width: 445px; height: 239px;"></video>
-    <div class="text" id="slideText1">Creativity for all.</div>
+<header>
+  <div class="container header-content">
+    <div class="logo">
+      بوتيك إيبك
+      <small>İpek Butik</small>
+    </div>
+
+    <a href="#contact">تواصل معنا</a>
+  </div>
+</header>
+
+<section class="hero">
+
+  <div class="symbol">İ</div>
+
+  <h1>بوتيك إيبك</h1>
+
+  <div class="turkish">
+    İpek Butik
+  </div>
+
+  <div class="subtitle">
+    إيبك للأزياء والأناقة
+  </div>
+
+  <p>
+    مرحبًا بكم في بوتيك إيبك.
+    نقدم لكم تجربة مميزة تجمع بين
+    الأناقة والبساطة والاهتمام بالتفاصيل.
+    تعرفوا على معلوماتنا وطرق التواصل معنا.
+  </p>
+
+  <div class="tags">
+    <span>بوتيك إيبك</span>
+    <span>İpek Butik</span>
+    <span>إيبك</span>
+    <span>İPEK</span>
+    <span>إيبك للأزياء</span>
+  </div>
+
+</section>
+
+<main class="container">
+
+<!-- أسماء الشركة -->
+
+<section class="card">
+
+  <h2>اسم الشركة بالعربية والتركية</h2>
+
+  <div class="names">
+
+    <div class="name1">
+      بوتيك إيبك
+    </div>
+
+    <div class="name2">
+      İpek Butik
+    </div>
+
+    <div class="divider"></div>
+
+    <div class="name3">
+      إيبك للأزياء
+    </div>
+
+    <div class="name4">
+      متجر إيبك للملابس
+    </div>
+
+    <div class="name4">
+      بيت إيبك للأناقة
+    </div>
+
+    <div class="name5">
+      İPEK BUTİK
+    </div>
+
+    <div class="name4">
+      إيبك | İpek
+    </div>
+
+    <div class="name4">
+      بوتيك الحرير
+    </div>
+
+    <div class="name-grid">
+      <div>بوتيك إيبك</div>
+      <div dir="ltr">İPEK</div>
+      <div>إيبك للأزياء</div>
+      <div dir="ltr">İpek Butik</div>
+    </div>
+
+    <p style="font-size:12px;color:#817780;margin-top:20px;">
+      الأسماء البديلة صيغ عرض وتسويق،
+      وليست أسماء تجارية مسجلة بصورة مستقلة.
+    </p>
+
+  </div>
+</section>
+
+<!-- معلومات الشركة -->
+
+<section class="card">
+
+  <h2>معلومات الشركة</h2>
+
+  <div class="content">
+
+    <div class="row">
+      <span class="label">الاسم التجاري في المستند</span>
+      <span class="value" dir="ltr">
+        İpek Butik
+      </span>
+    </div>
+
+    <div class="row">
+      <span class="label">الاسم بالعربية للعرض</span>
+      <span class="value">بوتيك إيبك</span>
+    </div>
+
+    <div class="row">
+      <span class="label">رقم السجل التجاري</span>
+      <span class="value">1807331</span>
+    </div>
+
+    <div class="row">
+      <span class="label">الشكل القانوني المذكور</span>
+      <span class="value">من الشركات الكبرى</span>
+    </div>
+
+    <div class="row">
+      <span class="label">حالة السجل حسب المستند</span>
+      <span class="value status">نشط - Active</span>
+    </div>
+
+    <div class="row">
+      <span class="label">تاريخ التسجيل</span>
+      <span class="value">2022/08/20</span>
+    </div>
+
+    <div class="row">
+      <span class="label">استثمار أجنبي</span>
+      <span class="value">نعم - Yes</span>
+    </div>
+
+    <div class="row">
+      <span class="label">تاريخ انتهاء السجل</span>
+      <span class="value">11/12/2028</span>
+    </div>
+
+  </div>
+
+</section>
+
+<!-- معلومات النشاط والترخيص -->
+
+<section class="card">
+
+  <h2>معلومات النشاط والترخيص</h2>
+
+  <div class="content">
+
+    <div class="row">
+      <span class="label">رقم الترخيص</span>
+      <span class="value">L277331</span>
+    </div>
+
+    <div class="row">
+      <span class="label">تعريف الترخيص</span>
+      <span class="value">LD-1673</span>
+    </div>
+
+    <div class="row">
+      <span class="label">النشاط المذكور في المستند</span>
+      <span class="value">
+        خدمات الترويج والتسويق
+        على المواقع الإلكترونية
+        ووسائل التواصل الاجتماعي
+      </span>
+    </div>
+
+    <div class="row">
+      <span class="label">مدة الترخيص</span>
+      <span class="value">12 شهرًا</span>
+    </div>
+
+    <div class="row">
+      <span class="label">الإصدار الأول</span>
+      <span class="value">25/06/2024</span>
+    </div>
+
+    <div class="row">
+      <span class="label">تاريخ الإصدار</span>
+      <span class="value">2022/08/20</span>
+    </div>
+
+    <div class="row">
+      <span class="label">تاريخ انتهاء الترخيص</span>
+      <span class="value">11/12/2028</span>
+    </div>
+
+  </div>
+</section>
+
+<!-- معلومات التواصل -->
+
+<section class="card">
+
+  <h2>معلومات التواصل</h2>
+
+  <div class="content">
+
+    <div class="row">
+      <span class="label">رقم الهاتف</span>
+      <span class="value">
+        <a href="tel:+966512177688">
+          +966512177688
+        </a>
+      </span>
+    </div>
+
+    <div class="row">
+      <span class="label">البريد الإلكتروني المذكور في الجانب الأيمن</span>
+      <span class="value">
+        <a href="mailto:Otp@i6jg.github.io">
+          Otp@i6jg.github.io
+        </a>
+      </span>
+    </div>
+
+    <div class="row">
+      <span class="label">البريد الإلكتروني المذكور في الجانب الأيسر</span>
+      <span class="value">
+        <a href="mailto:Otp@sougk.com">
+          Otp@sougk.com
+        </a>
+      </span>
+    </div>
+
+    <div class="row">
+      <span class="label">الموقع الإلكتروني</span>
+      <span class="value">
+        <a href="https://i6jg.github.io"
+           target="_blank"
+           rel="noopener noreferrer">
+          i6jg.github.io
+        </a>
+      </span>
+    </div>
+
+    <div class="row">
+      <span class="label">العنوان</span>
+      <span class="value">
+        طريق الملك فهد،
+        شارع العليا، الرياض،
+        11455،
+        المملكة العربية السعودية
+      </span>
+    </div>
+
+    <div class="row">
+      <span class="label">الرمز البريدي</span>
+      <span class="value">11455</span>
+    </div>
+
+  </div>
+
+</section>
+
+<!-- التواصل -->
+
+<section class="contact" id="contact">
+
+  <h2>تواصل مع بوتيك إيبك</h2>
+
+  <div class="turkish">
+    İpek Butik
+  </div>
+
+  <p>
+    يسعدنا استقبال استفساراتكم
+    والتواصل معكم.
+  </p>
+
+  <div class="buttons">
+
+    <a href="tel:+966512177688">
+      اتصال هاتفي
+    </a>
+
+    <a href="mailto:Otp@i6jg.github.io">
+      البريد الإلكتروني
+    </a>
+
+    <a href="https://wa.me/966512177688"
+       target="_blank"
+       rel="noopener noreferrer">
+      واتساب
+    </a>
+
+    <a href="https://i6jg.github.io"
+       target="_blank"
+       rel="noopener noreferrer">
+      زيارة الموقع
+    </a>
+
+  </div>
+
+</section>
+
+<div class="note">
+  صفحة تعريفية تعرض بيانات المستند المرفق
+  دون تحقق مستقل من صحة التسجيل أو الترخيص.
+  لا تمثل شهادة حكومية أو خدمة تحقق رسمية.
 </div>
 
-</div>
+</main>
 
-<script type="text/javascript" src="lib/jquery.min.js"></script>
-<script type="text/javascript" src="carousel.js"></script>
+<footer>
+
+  <div class="arabic">
+    بوتيك إيبك
+  </div>
+
+  <div class="turkish">
+    İpek Butik
+  </div>
+
+  <div class="small">
+    إيبك للأزياء
+    <br>
+    İPEK BUTİK
+    <br>
+    © 2026 İpek Butik
+    <br>
+    i6jg.github.io
+    <br>
+    Riyadh, Saudi Arabia - 11455
+  </div>
+
+</footer>
+
 </body>
 </html>
